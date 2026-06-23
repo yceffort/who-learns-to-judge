@@ -1,0 +1,18 @@
+pre-commit:
+  commands:
+    prettier:
+      glob: '**/*.{json,yaml,yml,md}'
+      run: pnpm exec prettier --write {staged_files}
+      stage_fixed: true
+
+    markdownlint:
+      glob: 'posts/**/*.md'
+      run: pnpm exec markdownlint --fix {staged_files}
+      stage_fixed: true
+
+    textlint:
+      skip:
+        - ref: main
+      glob: 'posts/**/*.md'
+      run: pnpm exec textlint --fix {staged_files}
+      stage_fixed: true

@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+.obsidian/
+*.canvas
+.idea/
+.vscode/
+
+# Caches
+.npm
+.eslintcache
+tmp/
+
+# Agent / 개인 작업 파일 (비공개)
+.agents/
+CLAUDE.md
+GUIDE.md
